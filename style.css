@@ -1,0 +1,409 @@
+@charset "UTF-8";
+html {
+  font-family: "Noto Sans", "Noto Sans JP";
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.readmore {
+  text-align: center;
+}
+
+.readmore a {
+  font-size: 14px;
+  color: #333;
+  padding-bottom: 1px;
+  display: inline-block;
+  position: relative;
+}
+
+.readmore a:after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: #333;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+
+.readmore a:hover:after {
+  opacity: 0;
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+header {
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  z-index: 30;
+}
+
+@media screen and (max-width: 599px) {
+  header {
+    width: 100%;
+  }
+}
+
+header .site-title {
+  margin: 0 120px;
+  padding: 20px 16px;
+  height: 30px;
+  line-height: 1px;
+}
+
+@media screen and (max-width: 599px) {
+  header .site-title {
+    margin: 0;
+  }
+}
+
+header nav {
+  width: 100%;
+  height: 39px;
+  background-color: #333;
+  margin: 0;
+  font-size: 14px;
+  overflow: hidden;
+  position: relative;
+}
+
+header nav .navlist {
+  width: 100%;
+  overflow-x: auto;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 120px;
+  padding: 0 16px;
+}
+
+@media screen and (max-width: 599px) {
+  header nav ul {
+    display: inline-table;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+header nav ul li {
+  list-style: none;
+  padding: 10px 60px 10px 0;
+}
+
+@media screen and (max-width: 599px) {
+  header nav ul li {
+    display: table-cell;
+  }
+}
+
+header nav ul a {
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+}
+
+header nav .next-btn {
+  display: none;
+}
+
+@media screen and (max-width: 599px) {
+  header nav .next-btn {
+    /* 右側に固定する部分 */
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    /* 固定部分の幅 */
+    height: 37px;
+    /* メニューの高さに合わせる */
+    line-height: 37px;
+    background: #fff;
+    border: 1px solid #333;
+    color: #333;
+    text-align: center;
+  }
+}
+
+.pickup {
+  width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 150px 16px 0 16px;
+  margin: 0 auto 60px;
+}
+
+.pickup article {
+  width: calc(96% / 3);
+}
+
+@media screen and (max-width: 599px) {
+  .pickup article {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+.pickup img {
+  width: 100%;
+}
+
+.pickup h2.article-title {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 599px) {
+  .pickup {
+    width: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 16px;
+}
+
+@media screen and (max-width: 599px) {
+  .container {
+    width: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.container main {
+  width: 759px;
+}
+
+@media screen and (max-width: 599px) {
+  .container main {
+    width: 100%;
+  }
+}
+
+.container main article {
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+.container main h2.article-title {
+  margin: 10px 0 15px;
+  font-size: 24px;
+}
+
+.container main img {
+  width: 100%;
+}
+
+.container main p {
+  margin: 0 auto;
+  padding: 10px 40px 30px 40px;
+}
+
+.container main ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+.container main ul li {
+  list-style: none;
+  padding-right: 20px;
+}
+
+.container main ul a {
+  font-size: 14px;
+}
+
+.container aside {
+  width: 345px;
+}
+
+@media screen and (max-width: 599px) {
+  .container aside {
+    width: 100%;
+  }
+}
+
+.container aside h3.side-title {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.container aside .author {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.container aside .author img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+}
+
+.container aside .author p {
+  font-size: 14px;
+  text-align-last: left;
+}
+
+.container aside .ranking {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.container aside .ranking img {
+  width: 100%;
+}
+
+.container aside .ranking h4.ranking-title {
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 0;
+  text-align-last: left;
+}
+
+.container aside .archive {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.container aside .archive ul {
+  padding: 0;
+}
+
+.container aside .archive li {
+  list-style: none;
+  padding: 20px;
+  font-size: 14px;
+  border-top: 1px solid #333;
+  text-align-last: left;
+}
+
+.container aside .archive li:last-child {
+  border-bottom: 1px solid #333;
+}
+
+footer {
+  background-color: #f7f7f7;
+  padding: 50px 0;
+}
+
+footer h3.footer-title {
+  font-size: 18px;
+  margin: 0 0 30px 0;
+}
+
+footer .item {
+  width: calc(90% / 3);
+}
+
+@media screen and (max-width: 599px) {
+  footer .item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  footer .item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+footer .item p {
+  margin: 0;
+  font-size: 14px;
+}
+
+footer .item.about ul {
+  padding: 0px;
+  margin: 20px 0;
+}
+
+footer .item.about li {
+  position: relative;
+  padding: 0px 0px 0px 1em;
+  list-style: none;
+}
+
+footer .item.about li a {
+  font-size: 14px;
+}
+
+footer .item.about li:before {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 0px;
+  height: 0px;
+  border: 0.3em solid transparent;
+  border-left: 0.4em solid #333;
+  content: "";
+  margin: 0 0 0 1px;
+}
+
+footer .item.menu ul {
+  padding-left: 0;
+}
+
+footer .item.menu li {
+  list-style: none;
+  padding: 15px;
+  font-size: 14px;
+  border-top: 1px solid #333;
+  text-align-last: left;
+}
+
+footer .item.menu li:last-child {
+  border-bottom: 1px solid #333;
+}
+
+.copyright {
+  background-color: #f7f7f7;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.copyright p {
+  margin: 0;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 599px) {
+  .copyright {
+    width: auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */
